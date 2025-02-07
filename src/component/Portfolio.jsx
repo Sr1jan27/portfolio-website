@@ -43,7 +43,7 @@ const Portfolio = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <span className="text-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Srijan Singh
+                Srijan Raghuvanshi
               </span>
             </div>
             
@@ -91,8 +91,8 @@ const Portfolio = () => {
       <section className="pt-32 pb-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-transparent"></div>
         <div className="max-w-7xl mx-auto text-center relative">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Hello, I'm Srijan Singh
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent" style={{lineHeight:'2'}}>
+            Hello, I'm Srijan Raghuvanshi
           </h1>
           <p className="text-xl text-gray-300 mb-8">Full Stack Developer | Open Source Enthusiast
           </p>
