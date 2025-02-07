@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const photos = [
+    "/images/i1.jpg",
+    "/images/12.jpg",
+    "/images/13.jpg",
+    "/images/14.jpeg",
+    "/images/15.jpeg"
+  ];
+
   const projects = [
     {
       title: "Life-touch: Yearbook",
@@ -104,6 +112,21 @@ const Portfolio = () => {
             Srijan Raghuvanshi
           </h1>
           <p className="text-xl text-gray-300 mb-8">Full Stack Developer | Problem Solver</p>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section id="gallery" className="py-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+          {photos.map((photo, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src={photo}
+                alt={`Gallery photo ${index + 1}`}
+                className="object-cover w-full h-48 hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
