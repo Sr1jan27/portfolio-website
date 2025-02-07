@@ -112,6 +112,11 @@ const Portfolio = () => {
             Srijan Raghuvanshi
           </h1>
           <p className="text-xl text-gray-300 mb-8">Full Stack Developer | Problem Solver</p>
+          <p className="text-lg text-gray-300 mb-8">
+            Full stack developer with over 2+ years of experience at Valuelabs, specializing in Java, Spring Boot, Angular, 
+            and multiple web technologies. Proven track record of developing robust applications, 
+            enhancing user interactions, and consistently solving complex technical challenges.
+          </p>
         </div>
       </section>
 
