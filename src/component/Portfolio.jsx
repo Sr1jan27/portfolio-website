@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
 
-  const photos = [
-    "/images/i1.jpg",
-    "/images/12.jpg",
-    "/images/13.jpg",
-    "/images/14.jpeg",
-    "/images/15.jpeg"
-  ];
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Set initial state
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const photos = isMobileView
+    ? ["/images/11.jpg", "/images/14.jpeg"]
+    : [
+        "/images/11.jpg",
+        "/images/12.jpg",
+        "/images/13.jpg",
+        "/images/14.jpeg",
+        "/images/15.jpeg"
+      ];
 
   const projects = [
     {
@@ -73,6 +87,14 @@ const Portfolio = () => {
     }
   ];
 
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#gallery", label: "Gallery" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* Navigation */}
@@ -100,8 +122,30 @@ const Portfolio = () => {
                 </svg>
               </button>
             </div>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link, index) => (
+                <a key={index} href={link.href} className="text-gray-300 hover:text-white transition-colors duration-300">
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-gray-800/50 backdrop-blur-md">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navLinks.map((link, index) => (
+                <a key={index} href={link.href} className="block px-3 py-2 text-gray-300 hover:text-white">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -120,7 +164,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Photo Gallery */}
+      {/* Photo Gallery Section */}
       <section id="gallery" className="py-8">
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
           {photos.map((photo, index) => (
