@@ -24,6 +24,7 @@ const Portfolio = () => {
         "/images/14.jpeg",
         "/images/15.jpeg"
       ];
+      
 
   const projects = [
     {
