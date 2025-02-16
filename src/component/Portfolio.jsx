@@ -266,7 +266,13 @@ const Portfolio = () => {
       </section>
 
       <section id="coding-profiles" className="min-h-screen relative bg-gray-800">
-        <div className="absolute inset-0">
+      <div className="absolute top-0 left-0 right-0 text-center pt-7">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-red-500 bg-clip-text text-transparent">
+            {'< Profiles />'}
+          </h2>
+        </div>
+        {/* 👆 ADDED HEADING HERE 👆 */}
+        <div className="absolute inset-0 pt-28">
           <div className="h-full w-full grid grid-cols-3">
             {profilesShow.map((profile, index) => (
               <a
