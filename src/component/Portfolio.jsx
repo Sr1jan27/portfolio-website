@@ -265,6 +265,47 @@ const Portfolio = () => {
         </div>
       </section>
 
+      <section id="coding-profiles" className="min-h-screen relative bg-gray-800">
+        <div className="absolute inset-0">
+          <div className="h-full w-full grid grid-cols-3">
+            {profilesShow.map((profile, index) => (
+              <a
+                key={index}
+                href={profile.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gray-900/90 transition-all duration-500 group-hover:bg-gray-900/70" />
+                <div className="h-full w-full flex flex-col items-center justify-center p-8 relative">
+                  <div className="transform transition-all duration-500 group-hover:scale-110">
+                    {/* 👇 MODIFIED IMAGE SIZE HERE 👇 */}
+                    <div className="w-72 h-60 md:w-80 md:h-70 overflow-hidden border-4 border-yellow-500 shadow-lg shadow-purple-500/20 mb-8 rounded-lg">
+                      <img
+                        src={profile.image}
+                        alt={profile.title}
+                        className="w-full h-full object-contain bg-gray-800 p-4"
+                      />
+                    </div>
+                    {/* 👆 MODIFIED IMAGE SIZE HERE 👆 */}
+                    <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-100 mb-4 bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
+                      {profile.title}
+                    </h3>
+                    <div className="flex items-center justify-center text-purple-400 group-hover:text-purple-300">
+                      <span className="text-lg">View Profile</span>
+                      <svg className="w-6 h-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 border-r border-gray-700 pointer-events-none" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 relative">
         <div className="max-w-7xl mx-auto text-center relative">
