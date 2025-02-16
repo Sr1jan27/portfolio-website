@@ -109,6 +109,7 @@ const Portfolio = () => {
     { href: "#gallery", label: "Gallery" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#coding-profiles", label: "Coding_Profiles" },
     { href: "#contact", label: "Contact" }
   ];
 
