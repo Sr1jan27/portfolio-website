@@ -25,6 +25,23 @@ const Portfolio = () => {
         "/images/15.jpeg"
       ];
       
+  const profilesShow = [
+    {
+      title:"Leetcode Profile",
+      link: "https://leetcode.com/u/srijan27/",
+      image: "/images/leetcode_profile.png"
+    },
+    {
+      title:"Geeks For Geeks Profile",
+      link: "https://www.geeksforgeeks.org/user/singhsrijan809/",
+      image: "/images/gfg_profile.png"
+    },
+    {
+      title:"Github Profile",
+      link: "https://github.com/Sr1jan27",
+      image: "/images/git_profile.png"
+    }
+  ]
   const projects = [
     {
       title: "Life-touch: Yearbook",
