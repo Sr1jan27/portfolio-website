@@ -26,6 +26,7 @@ const Portfolio = () => {
       ];
       
 
+
   const projects = [
     {
       title: "Life-touch: Yearbook",
